@@ -24,7 +24,7 @@ namespace EntityLayer.Concrete
         public virtual Heading Heading { get; set; }
 
         //Her yazını bir yazarı olmalı
-        //? değerin veritabanında boş geçilmesine izin verir
+        //? değerin veritabanında boş geçilmesine izin verirr
         public int? WriterID { get; set; }
         public virtual Writer Writer { get; set; }
 
