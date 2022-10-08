@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace DataAccesLayer.Concrete
 {
+    //DbContext den türettiğimiz context bize veritabanı işlemlerini sağlayacak
+
     public class Context : DbContext
     {
         //EntityLayerdaki clasları kullandığımız için bu katmana refarans yöntemi ile EntityLayer ı ekliyoruz
@@ -16,6 +18,7 @@ namespace DataAccesLayer.Concrete
         //Property isimlerinin "s"takısı almasını sebebi sınıf isimleri ile karışmaması
         //"s" takısı olan isimler veritabanında tablo isimi olacaklar
 
+        //Aşağıdaki DbSet lerin herbirine entity denir
         public DbSet<About> Abouts { get; set; }
         public DbSet<Category> Categories { get; set; }
         public  DbSet<Contact> Contacts { get; set; }
