@@ -19,6 +19,7 @@ namespace BusinessLayer.Concrete
 
         public void CategoryAddBL (Category p)
         {
+            /*
             if(p.CategoryName=="" || p.CategoryName.Length <= 3 || p.CategoryDescription=="" ||
                 p.CategoryStatus==false || p.CategoryName.Length >= 50)
             {
@@ -26,8 +27,10 @@ namespace BusinessLayer.Concrete
             }
             else
             {
-                repo.Insert(p);
             }
+            */
+            repo.Insert(p);
+
         }
 
     }
