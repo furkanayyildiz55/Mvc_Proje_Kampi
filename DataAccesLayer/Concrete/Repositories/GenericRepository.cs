@@ -32,6 +32,11 @@ namespace DataAccesLayer.Concrete.Repositories
             c.SaveChanges();
         }
 
+        public T Get(Expression<Func<T, bool>> filter)
+        {
+            return _object.SingleOrDefault(filter); //Dizde veya listede sadece bir değer döndürek için kullanılan EF linq methodu
+        }
+
         public void Insert(T p)
         {
             _object.Add(p);
