@@ -18,9 +18,9 @@
         <tr>
             <th>@item.CategoryID</th>
             <td>@item.CategoryName</td>
-            <td style="text-align:center"><a href="/AdminCategory/DeleteKategory/@item.CategoryID" class="btn btn-danger">Sil</a></td>
-            <td style="text-align:center"><a href="#" class="btn btn-warning">Güncelle</a></td>
-            <td style="text-align:center"><a href="#" class="btn btn-primary center" >başlıklar</a></td>
+            <td style="text-align:center"><a href="/AdminCategory/DeleteKategory/@item.CategoryID" class="btn btn-danger">Sil</a></td> @*Yapılan link yönlendirme ile /AdminCategory/DeleteKategory/@item.CategoryID" hethodu çalıştırıyoruz ve aynı zamanda category ıd parametresini gönderiyoruz *@
+            <td style="text-align:center"><a href="/AdminCategory/EditCategory/@item.CategoryID" class="btn btn-warning">Güncelle</a></td>
+            <td style="text-align:center"><a href="#" class="btn btn-primary center">başlıklar</a></td>
         </tr>
     }
 </table>
