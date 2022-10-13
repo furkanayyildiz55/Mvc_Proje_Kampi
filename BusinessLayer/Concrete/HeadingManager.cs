@@ -28,7 +28,7 @@ namespace BusinessLayer.Concrete
         public int GetSpecificHeading()
         {
             //  int veri = context.Headings.Count();
-            int veri = context.Headings.GroupBy(x => x.WriterID).
+         //   int veri = context.Headings.GroupBy(x => x.WriterID).
                 int veri = context.Headings.Where(x => x.CategoryID == 20).ToList().Count;
             return veri;
         }
