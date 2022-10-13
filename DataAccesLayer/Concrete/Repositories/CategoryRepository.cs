@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccesLayer.Concrete.Repositories
 {
+    //Ana işi yapan EF methodları burada
     public class CategoryRepository : ICategoryDal
     {
 
@@ -41,11 +42,14 @@ namespace DataAccesLayer.Concrete.Repositories
         public List<Category> List(Expression<Func<Category, bool>> filter)
         {
             throw new NotImplementedException();
+
         }
 
         public void Update(Category p)
         {
             c.SaveChanges();
         }
+
+
     }
 }

@@ -45,10 +45,10 @@ namespace BusinessLayer.Concrete
             return _categoryDal.Get(x=>x.CategoryID==id);
         }
 
-        //public void CategoryAddBL(Category category)
-        //{
-
-        //}
+        public int GetCategoryLength()
+        {
+            return _categoryDal.List().Count;
+        }
 
         public List<Category> GetList()
         {

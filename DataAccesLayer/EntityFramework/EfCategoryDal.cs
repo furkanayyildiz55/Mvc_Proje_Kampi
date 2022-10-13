@@ -11,5 +11,6 @@ namespace DataAccesLayer.EntityFramework
 {
     public class EfCategoryDal : GenericRepository<Category>, ICategoryDal
     {
+
     }
 }

@@ -18,13 +18,12 @@ namespace MvcProjeKampi.Controllers
         public ActionResult Index()
         {
             var categoryValues = cm.GetList();
-            return View(categoryValues);
+            return View(categoryValues);  //categoryValues view tarafına göndermek istediğimiz bilgiler
         }
 
         [HttpGet]
         public ActionResult AddCategory()
         {
-
             return View();
         }
 

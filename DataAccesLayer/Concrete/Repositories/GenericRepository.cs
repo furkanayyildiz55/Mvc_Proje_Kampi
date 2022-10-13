@@ -16,6 +16,7 @@ namespace DataAccesLayer.Concrete.Repositories
     //DbSet<T> _object = burada ise T yerine gelecek olan sınıf veritabanımızdaki tabloyu kontrol etmektedir
     //
 
+    //ANA İŞİ YAPAN EF KODLARI BULUNMAKTA
     public class GenericRepository<T> : IRepository<T> where T : class
     {
         Context c = new Context();
@@ -59,9 +60,13 @@ namespace DataAccesLayer.Concrete.Repositories
 
         public void Update(T p)
         {
+          
+
             var updatedEntity = c.Entry(p);
             updatedEntity.State = EntityState.Modified;
             c.SaveChanges();
         }
+
+
     }
 }
