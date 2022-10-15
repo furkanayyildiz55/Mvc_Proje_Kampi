@@ -43,12 +43,42 @@ namespace MvcProjeKampi.Controllers
             {
                 foreach (var item in result.Errors)
                 {
-                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage); 
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
             }
-
-
             return View();
+        }
+
+        [HttpGet]
+        public  ActionResult EditWriter(int id)
+        {
+            var writerValue = wm.GetByID(id);
+            return View(writerValue);
+        }
+
+        [HttpPost]
+        public ActionResult EditWriter (Writer p)
+        {
+            WriterValidator writerValidation = new WriterValidator();
+            ValidationResult result= writerValidation.Validate(p);
+
+            if (result.IsValid)
+            {
+                wm.WriterUpdate(p);
+                return RedirectToAction("Index");
+
+            }
+            else
+            {
+
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+
+
         }
 
     }
