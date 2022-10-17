@@ -9,5 +9,6 @@ namespace DataAccesLayer.Abstract
 {
     public interface IContactDal : IRepository<Contact>
     {
+
     }
 }
