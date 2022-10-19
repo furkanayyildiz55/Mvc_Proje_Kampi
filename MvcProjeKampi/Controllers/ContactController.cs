@@ -10,13 +10,18 @@ namespace MvcProjeKampi.Controllers
         ContatcManager contatcManager = new ContatcManager(new EfContactDal() );
         ContactValidator contactValidator = new ContactValidator();
 
-        int DenemeDeğşken;
 
         // GET: Contact
         public ActionResult Index()
         {
             var ContactValues = contatcManager.GetList();
             return View(ContactValues);
+        }
+
+        public ActionResult GetContactDetail(int id)
+        {
+            var contactValues = contatcManager.GetByID(id);
+            return View(contactValues);  
         }
     }
 }
