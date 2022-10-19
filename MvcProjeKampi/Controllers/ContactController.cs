@@ -10,6 +10,8 @@ namespace MvcProjeKampi.Controllers
         ContatcManager contatcManager = new ContatcManager(new EfContactDal() );
         ContactValidator contactValidator = new ContactValidator();
 
+        int DenemeDeğşken;
+
         // GET: Contact
         public ActionResult Index()
         {
