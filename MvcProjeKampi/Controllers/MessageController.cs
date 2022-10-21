@@ -11,6 +11,9 @@ namespace MvcProjeKampi.Controllers
 {
     public class MessageController : Controller
     {
+        //İletişim kısmı web sitesine gönderilen mesajlar 
+        //Gelen ve Gönderilen mesajlar ise site özel içi mesajlasmalar 
+
 
         MessageManager messageManager = new MessageManager(new EfMessageDal());
 
