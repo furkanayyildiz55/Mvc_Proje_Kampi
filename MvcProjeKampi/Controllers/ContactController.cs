@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
 using DataAccesLayer.EntityFramework;
+using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace MvcProjeKampi.Controllers
@@ -9,6 +10,8 @@ namespace MvcProjeKampi.Controllers
     {
         ContatcManager contatcManager = new ContatcManager(new EfContactDal() );
         ContactValidator contactValidator = new ContactValidator();
+
+        MessageManager messageManager = new MessageManager(new EfMessageDal());
 
 
         // GET: Contact
@@ -26,7 +29,12 @@ namespace MvcProjeKampi.Controllers
 
         public PartialViewResult MessageListMenu()
         {
-            return PartialView();
+            int ınboxMessageCount = messageManager.InboxMessageCount("admin@gmail.com");
+            int MessageCount = contatcManager.CoulmnCount();
+
+            int[] values =new int[] { MessageCount, ınboxMessageCount,  };
+
+            return PartialView(values);
         }
     }
 }

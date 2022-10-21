@@ -18,6 +18,7 @@ namespace BusinessLayer.Concrete
             _contactDal = contactDal;
         }
 
+
         public void ContactAdd(Contact contact)
         {
             _contactDal.Insert(contact);
@@ -39,11 +40,20 @@ namespace BusinessLayer.Concrete
             return contactValue;
         }
 
+        public int ContactMessageCount()
+        {
+            return _contactDal.SpesificCoulmnCount(x=> x.UserMail == "furkan@mail.com");
+        }
+
+
         public List<Contact> GetList()
         {
             return _contactDal.List();
         }
 
-
+        public int CoulmnCount()
+        {
+            return _contactDal.CoulmCount();
+        }
     }
 }

@@ -17,5 +17,7 @@ namespace BusinessLayer.Abstract
 
         Contact GetByID(int id);
 
+        int CoulmnCount();
+
     }
 }

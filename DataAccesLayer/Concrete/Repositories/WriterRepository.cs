@@ -15,6 +15,11 @@ namespace DataAccesLayer.Concrete.Repositories
         Context c = new Context();
         DbSet<Writer> _object;
 
+        public int CoulmCount()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Delete(Writer p)
         {
             throw new NotImplementedException();
@@ -36,6 +41,11 @@ namespace DataAccesLayer.Concrete.Repositories
         }
 
         public List<Writer> List(Expression<Func<Writer, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int SpesificCoulmnCount(Expression<Func<Writer, bool>> filter)
         {
             throw new NotImplementedException();
         }

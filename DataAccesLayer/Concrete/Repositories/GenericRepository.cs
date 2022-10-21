@@ -27,6 +27,8 @@ namespace DataAccesLayer.Concrete.Repositories
             _object = c.Set<T>();  //c değeri yani Contextten gelen classı _object e aktar
         }
 
+
+
         public void Delete(T p)
         {
             var deletedEnitiy = c.Entry(p);
@@ -60,12 +62,26 @@ namespace DataAccesLayer.Concrete.Repositories
 
         public void Update(T p)
         {
-          
-
             var updatedEntity = c.Entry(p);
             updatedEntity.State = EntityState.Modified;
             c.SaveChanges();
         }
+
+        //ÖZEL OLARAK SÜTUN SAYISI ÇEKMEK İÇİN
+        public int SpesificCoulmnCount(Expression<Func<T, bool>> filter)
+        {
+            return _object.Where(filter).Count();
+        }
+
+        ///TOPLAM SÜTUN SAYISINI VERİR
+        public int CoulmCount()
+        {
+            return _object.Count();
+        }
+
+
+
+
 
 
     }

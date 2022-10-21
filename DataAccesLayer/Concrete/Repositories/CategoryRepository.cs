@@ -17,6 +17,11 @@ namespace DataAccesLayer.Concrete.Repositories
         Context c = new Context();
         DbSet<Category> _object;
 
+        public int CoulmCount()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Delete(Category p)
         {
             _object.Remove(p);
@@ -43,6 +48,11 @@ namespace DataAccesLayer.Concrete.Repositories
         {
             throw new NotImplementedException();
 
+        }
+
+        public int SpesificCoulmnCount(Expression<Func<Category, bool>> filter)
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(Category p)
