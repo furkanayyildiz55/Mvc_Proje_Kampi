@@ -1,4 +1,4 @@
-﻿@model EntityLayer.Concrete.Message 
+﻿@model EntityLayer.Concrete.Message
 
 
 @{
@@ -15,7 +15,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Gelen Mesaj Detayı</h1>
+                    <h1>Gönderilen Mesaj Detayı</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -31,7 +31,7 @@
                 <div class="col-md-9">
                     <div class="card card-primary card-outline">
                         <div class="card-header">
-                            <h3 class="card-title">Tarafınıza Gelen Mail</h3>
+                            <h3 class="card-title">Gönderilen Mail</h3>
                             <div class="card-tools">
                                 <a href="#" class="btn btn-tool" data-toggle="tooltip" title="Previous"><i class="fas fa-chevron-left"></i></a>
                                 <a href="#" class="btn btn-tool" data-toggle="tooltip" title="Next"><i class="fas fa-chevron-right"></i></a>
@@ -46,7 +46,7 @@
                             <div class="mailbox-read-info">
                                 <h5>Konu : @Html.DisplayFor(x => x.Subject)</h5>
                                 <h6>
-                                    Mail : @Html.DisplayFor(x => x.ReceiverMail)
+                                    Alıcı : @Html.DisplayFor(x => x.ReceiverMail)
                                     <span class="mailbox-read-time float-right">@DateTime.Parse(Html.DisplayFor(x => x.MessageDate).ToString()).ToShortDateString()</span>
                                     @*<span class="mailbox-read-time float-lg-right ">@Model.MessageDate.ToString("MMMMMM")</span>*@
 
@@ -59,7 +59,7 @@
                         <!-- /.mailbox-controls -->
                         <div class="mailbox-read-message">
                             <p>
-                                @Html.Raw(Model.MessageContent)
+                              @Html.Raw(Model.MessageContent)
                             </p>
                         </div>
                         <!-- /.mailbox-read-message -->

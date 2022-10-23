@@ -102,6 +102,14 @@
     <Compile Include="Migrations\202210201717329_mig_messages_add.designer.cs">
       <DependentUpon>202210201717329_mig_messages_add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210231439005_mig_contact_date_add.cs" />
+    <Compile Include="Migrations\202210231439005_mig_contact_date_add.designer.cs">
+      <DependentUpon>202210231439005_mig_contact_date_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210232005467_mig_message_status_and_allowhtml_add.cs" />
+    <Compile Include="Migrations\202210232005467_mig_message_status_and_allowhtml_add.designer.cs">
+      <DependentUpon>202210232005467_mig_message_status_and_allowhtml_add.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -139,6 +147,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210201717329_mig_messages_add.resx">
       <DependentUpon>202210201717329_mig_messages_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210231439005_mig_contact_date_add.resx">
+      <DependentUpon>202210231439005_mig_contact_date_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210232005467_mig_message_status_and_allowhtml_add.resx">
+      <DependentUpon>202210232005467_mig_message_status_and_allowhtml_add.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
