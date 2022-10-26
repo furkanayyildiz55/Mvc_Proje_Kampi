@@ -142,6 +142,7 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HeadingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
@@ -315,6 +316,10 @@
     <Content Include="AdminLTE-3.0.4\docs\_layouts\home.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\page.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\post.html" />
+    <Content Include="AdminLTE-3.0.4\images\1.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\2.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\3.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\4.jpg" />
     <Content Include="AdminLTE-3.0.4\index.html" />
     <Content Include="AdminLTE-3.0.4\index2.html" />
     <Content Include="AdminLTE-3.0.4\index3.html" />
@@ -2314,6 +2319,7 @@
     <Content Include="Views\Message\DeletedBox.cshtml" />
     <Content Include="Views\Message\DraftedBox.cshtml" />
     <Content Include="Views\ErrorPage\Page404.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
