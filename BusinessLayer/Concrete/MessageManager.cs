@@ -27,14 +27,24 @@ namespace BusinessLayer.Concrete
 
         public List<Message> GetListInbox()
         {
-            return _messageDal.List(x => x.ReceiverMail == "admin@gmail.com");
+            return _messageDal.List(x => x.ReceiverMail == "admin@gmail.com" && x.MessageStatus == "active");
         }
 
         public List<Message> GetListSendbox()
         {
-            return _messageDal.List(x => x.SenderMail == "admin@gmail.com");
+            return _messageDal.List(x => x.SenderMail == "admin@gmail.com" && x.MessageStatus == "active");
         }
 
+        public List<Message> GetListDeletedbox()
+        {
+            return _messageDal.List(x => x.SenderMail == "admin@gmail.com" && x.MessageStatus=="delete");
+        }
+
+        public List<Message> GetListDraftedbox()
+        {
+            return _messageDal.List(x => x.SenderMail == "admin@gmail.com" && x.MessageStatus == "draft");
+
+        }
 
 
         public void MessageAdd(Message message)
@@ -56,8 +66,14 @@ namespace BusinessLayer.Concrete
         public int InboxMessageCount(string User)
         {
             return _messageDal.SpesificCoulmnCount(x => x.ReceiverMail == User);
+            MessageStatus.aktive.ToString();
         }
 
 
+    }
+
+    enum MessageStatus
+    {
+        aktive , deleted , draft
     }
 }

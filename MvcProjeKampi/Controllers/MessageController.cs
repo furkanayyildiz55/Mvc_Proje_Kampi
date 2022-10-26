@@ -33,6 +33,19 @@ namespace MvcProjeKampi.Controllers
             return View(sendMessageList);
         }
 
+        public ActionResult DeletedBox()
+        {
+            var deletedMessageList = messageManager.GetListDeletedbox();
+            return View(deletedMessageList);
+        }
+
+        public ActionResult DraftedBox()
+        {
+            var draftedMessageList = messageManager.GetListDraftedbox();
+            return View(draftedMessageList);
+        }
+
+
 
         [HttpGet]
         public ActionResult NewMessage()
@@ -41,8 +54,20 @@ namespace MvcProjeKampi.Controllers
         }
 
         [HttpPost]
-        public ActionResult NewMessage(Message message)
+        public ActionResult NewMessage(Message message , string submit)
         {
+            if(submit == "active")
+            {
+                message.MessageStatus = "active";
+            }
+            
+            if(submit == "draft")
+            {
+                message.MessageStatus = "draft";
+            }
+
+
+
             message.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             ValidationResult results = messageValidations.Validate(message);
             if(results.IsValid)
