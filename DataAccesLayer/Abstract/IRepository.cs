@@ -28,5 +28,6 @@ namespace DataAccesLayer.Abstract
         ///
         int SpesificCoulmnCount(Expression<Func<T, bool>> filter);
         int CoulmCount();
+        T FirstOrDefault(Expression<Func<T, bool>> filter);
     }
 }

@@ -11,7 +11,11 @@ using System.Threading.Tasks;
 namespace DataAccesLayer.Concrete.Repositories
 {
     //Ana işi yapan EF methodları burada
-    public class CategoryRepository : ICategoryDal
+
+    
+    //public class CategoryRepository : ICategoryDal
+    public class CategoryRepository 
+
     {
 
         Context c = new Context();

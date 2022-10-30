@@ -42,6 +42,8 @@ namespace DataAccesLayer.Concrete.Repositories
             return _object.SingleOrDefault(filter); //Dizde veya listede sadece bir değer döndürek için kullanılan EF linq methodu
         }
 
+
+
         public void Insert(T p)
         {
             var addedEntity = c.Entry(p);
@@ -77,6 +79,12 @@ namespace DataAccesLayer.Concrete.Repositories
         public int CoulmCount()
         {
             return _object.Count();
+        }
+
+        public T FirstOrDefault(Expression<Func<T, bool>> filter)
+        {
+            return _object.FirstOrDefault(filter);
+            
         }
 
 
