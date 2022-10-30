@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace MvcProjeKampi.Controllers
 {
@@ -26,13 +27,16 @@ namespace MvcProjeKampi.Controllers
             if (admin == null)
             {
                 return RedirectToAction("Index");
+
             }
             else
             {
-                return RedirectToAction("Inbox"  , "Message");
+                // PARAMETRELER: COOKİE İSMİ İLK , KALICI COOKİE 
+                FormsAuthentication.SetAuthCookie(admin.AdminUserName, false);
+                Session["AdminUserName"] = admin.AdminUserName;
+                return RedirectToAction("Index", "AdminCategory");
             }
 
-            return View();
         }
     }
 }
